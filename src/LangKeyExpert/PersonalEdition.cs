@@ -100,5 +100,18 @@ namespace LangKeyExpert
                 this.Visible = true;
             }
         }
+
+        private void PersonalEdition_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+            //this.Close();
+            //this.Dispose();
+        }
+
+        private void Ìí¼ÓToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KeyAdd keyAdd = new KeyAdd(dsXML);
+            keyAdd.ShowDialog();
+        }
     }
 }

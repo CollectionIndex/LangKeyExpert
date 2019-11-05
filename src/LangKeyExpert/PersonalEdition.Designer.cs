@@ -137,15 +137,16 @@
             this.添加ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("添加ToolStripMenuItem.Image")));
             this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
             this.添加ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.添加ToolStripMenuItem.Text = "添加";
+            this.添加ToolStripMenuItem.Click += new System.EventHandler(this.添加ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
             this.修改ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("修改ToolStripMenuItem.Image")));
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
             this.修改ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.修改ToolStripMenuItem.Text = "修改";
             // 
             // 删除ToolStripMenuItem
@@ -153,7 +154,7 @@
             this.删除ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("删除ToolStripMenuItem.Image")));
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
             this.删除ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             // 
             // 界面ToolStripMenuItem
@@ -327,6 +328,7 @@
             this.Name = "PersonalEdition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "浪曦密码管理专家";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PersonalEdition_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
