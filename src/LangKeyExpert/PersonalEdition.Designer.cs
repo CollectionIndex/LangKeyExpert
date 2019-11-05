@@ -53,11 +53,13 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgUserKey = new System.Windows.Forms.DataGridView();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.dsXML = new System.Data.DataSet();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUserKey)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsXML)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -89,7 +91,7 @@
             this.导入ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("导入ToolStripMenuItem.Image")));
             this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
             this.导入ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.导入ToolStripMenuItem.Text = "导入";
             this.导入ToolStripMenuItem.Click += new System.EventHandler(this.导入ToolStripMenuItem_Click);
             // 
@@ -98,19 +100,19 @@
             this.导出ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("导出ToolStripMenuItem.Image")));
             this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
             this.导出ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
-            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.导出ToolStripMenuItem.Text = "导出";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(132, 6);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             this.退出ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -130,7 +132,7 @@
             this.添加ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("添加ToolStripMenuItem.Image")));
             this.添加ToolStripMenuItem.Name = "添加ToolStripMenuItem";
             this.添加ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.添加ToolStripMenuItem.Text = "添加";
             // 
             // 修改ToolStripMenuItem
@@ -138,7 +140,7 @@
             this.修改ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("修改ToolStripMenuItem.Image")));
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
             this.修改ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.修改ToolStripMenuItem.Text = "修改";
             // 
             // 删除ToolStripMenuItem
@@ -146,7 +148,7 @@
             this.删除ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("删除ToolStripMenuItem.Image")));
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
             this.删除ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             // 
             // 界面ToolStripMenuItem
@@ -161,14 +163,14 @@
             // 水晶绿ToolStripMenuItem
             // 
             this.水晶绿ToolStripMenuItem.Name = "水晶绿ToolStripMenuItem";
-            this.水晶绿ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.水晶绿ToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.水晶绿ToolStripMenuItem.Text = "水晶绿";
             this.水晶绿ToolStripMenuItem.Click += new System.EventHandler(this.水晶绿ToolStripMenuItem_Click);
             // 
             // 水晶蓝ToolStripMenuItem
             // 
             this.水晶蓝ToolStripMenuItem.Name = "水晶蓝ToolStripMenuItem";
-            this.水晶蓝ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.水晶蓝ToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.水晶蓝ToolStripMenuItem.Text = "水晶蓝";
             this.水晶蓝ToolStripMenuItem.Click += new System.EventHandler(this.水晶蓝ToolStripMenuItem_Click);
             // 
@@ -186,14 +188,14 @@
             this.帮助ToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("帮助ToolStripMenuItem1.Image")));
             this.帮助ToolStripMenuItem1.Name = "帮助ToolStripMenuItem1";
             this.帮助ToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
             this.帮助ToolStripMenuItem1.Text = "帮助";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("关于ToolStripMenuItem.Image")));
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
             // toolStrip1
@@ -275,30 +277,34 @@
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton7.Text = "toolStripButton7";
             // 
-            // dataGridView1
+            // dgUserKey
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.dgUserKey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(483, 272);
-            this.dataGridView1.TabIndex = 2;
+            this.dgUserKey.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgUserKey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUserKey.Location = new System.Drawing.Point(12, 52);
+            this.dgUserKey.Name = "dgUserKey";
+            this.dgUserKey.RowTemplate.Height = 23;
+            this.dgUserKey.Size = new System.Drawing.Size(483, 272);
+            this.dgUserKey.TabIndex = 2;
             // 
             // skinEngine1
             // 
             this.skinEngine1.SerialNumber = "";
             this.skinEngine1.SkinFile = null;
             // 
+            // dsXML
+            // 
+            this.dsXML.DataSetName = "NewDataSet";
+            // 
             // PersonalEdition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 336);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgUserKey);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -312,7 +318,8 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUserKey)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsXML)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,7 +351,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgUserKey;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Data.DataSet dsXML;
     }
 }

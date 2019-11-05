@@ -80,7 +80,6 @@
     </Compile>
     <None Include="images\DiamondBlue.ssk" />
     <None Include="images\DiamondGreen.ssk" />
-    <None Include="images\Thumbs.db" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
