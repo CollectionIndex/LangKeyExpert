@@ -56,10 +56,14 @@
             this.dgUserKey = new System.Windows.Forms.DataGridView();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.dsXML = new System.Data.DataSet();
+            this.diaSaveFile = new System.Windows.Forms.SaveFileDialog();
+            this.diaFile = new System.Windows.Forms.OpenFileDialog();
+            this.twoXML = new System.Data.DataSet();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUserKey)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsXML)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoXML)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,7 +95,7 @@
             this.导入ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("导入ToolStripMenuItem.Image")));
             this.导入ToolStripMenuItem.Name = "导入ToolStripMenuItem";
             this.导入ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.导入ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.导入ToolStripMenuItem.Text = "导入";
             this.导入ToolStripMenuItem.Click += new System.EventHandler(this.导入ToolStripMenuItem_Click);
             // 
@@ -100,19 +104,20 @@
             this.导出ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("导出ToolStripMenuItem.Image")));
             this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
             this.导出ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
-            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.导出ToolStripMenuItem.Text = "导出";
+            this.导出ToolStripMenuItem.Click += new System.EventHandler(this.导出ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(132, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
             this.退出ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -299,6 +304,14 @@
             // 
             this.dsXML.DataSetName = "NewDataSet";
             // 
+            // diaFile
+            // 
+            this.diaFile.FileName = "openFileDialog1";
+            // 
+            // twoXML
+            // 
+            this.twoXML.DataSetName = "NewDataSet";
+            // 
             // PersonalEdition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -320,6 +333,7 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUserKey)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsXML)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.twoXML)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,5 +368,8 @@
         private System.Windows.Forms.DataGridView dgUserKey;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
         private System.Data.DataSet dsXML;
+        private System.Windows.Forms.SaveFileDialog diaSaveFile;
+        private System.Windows.Forms.OpenFileDialog diaFile;
+        private System.Data.DataSet twoXML;
     }
 }

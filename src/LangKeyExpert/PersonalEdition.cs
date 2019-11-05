@@ -43,7 +43,37 @@ namespace LangKeyExpert
 
         private void 导入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            if(diaFile.ShowDialog()==DialogResult.OK)
+            {
+                if(diaFile.OpenFile()!=null)
+                {
+                    twoXML.ReadXml(@diaFile.FileName);
+                    foreach(DataRow twoRow in twoXML.Tables["UserKey"].Rows)
+                    {
+                        DataRow newRow = dsXML.Tables["UserKey"].NewRow();
+                        newRow["Number"] = twoRow["Number"];
+                        newRow["Title"] = twoRow["Title"];
+                        newRow["NetAdd"] = twoRow["NetAdd"];
+                        newRow["Name"] = twoRow["Name"];
+                        newRow["Key"] = twoRow["Key"];
+                        newRow["UpdateTime"] = twoRow["UpdateTime"];
+                        dsXML.Tables["UserKey"].Rows.Add(newRow);
+                    }
+                    int n = dsXML.Tables["UserKey"].Rows.Count;
+                    for (int i = 0; i < n; i++)
+                    {
+                        dsXML.Tables["UserKey"].Rows[i]["Number"] = i + 1;
+                    }
+                    dsXML.WriteXml(@"UserKey.xml");
+                    this.Visible = true;
+                    MessageBox.Show("文件导入成功！", "浪曦提醒");                    
+                }
+            }
+            else
+            {
+                this.Visible=true;
+            }
         }
 
         private void 水晶绿ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +84,21 @@ namespace LangKeyExpert
         private void 水晶蓝ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.skinEngine1.SkinFile = "DiamondBlue.ssk";
+        }
+
+        private void 导出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (diaSaveFile.ShowDialog() == DialogResult.OK)
+            {
+                dsXML.WriteXml(@diaSaveFile.FileName);
+                this.Visible = true;
+                MessageBox.Show("文件导出成功！", "浪曦提醒");
+            }
+            else
+            {
+                this.Visible = true;
+            }
         }
     }
 }
